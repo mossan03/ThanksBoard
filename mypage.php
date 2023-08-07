@@ -9,6 +9,10 @@ function h ($string) {
     return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 }
 
+function h_d ($string) {
+  return htmlspecialchars_decode($string);
+}
+
 if (isset($_SESSION['user'])) {
 
     require 'pdo.php';
@@ -24,7 +28,7 @@ if (isset($_SESSION['user'])) {
     exit;
 }
 
-require 'html/login_header.html';
+require 'html/login-header.html';
 ?>
 
     <div class="accordion mypage-accordion">
@@ -33,7 +37,7 @@ require 'html/login_header.html';
         <div class="article-wrapper">
           <?php foreach($message_array as $row): ?>
           <article>
-            <p class="message"><?= h($row['message']); ?></p>
+            <p class="message"><?= h_d($row['message']); ?></p>
             <time class="message-date"><?= h($row['postDate']); ?></time>
           </article>
           <?php endforeach; ?>
@@ -86,4 +90,4 @@ require 'html/login_header.html';
       <hr>
     </div>
 
-<?php require 'html/login_footer.html'; ?>
+<?php require 'html/login-footer.html'; ?>

@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require 'html/login_header.html';
+require 'html/login-header.html';
 ?>
 
     <form action="pw-function.php" method="post" class="sub-wrapper">
@@ -28,4 +28,4 @@ require 'html/login_header.html';
       <?= $_SESSION['error'] ?? ''; ?>
     </div>
 
-<?php require 'html/login_footer.html'; ?>
+<?php require 'html/login-footer.html'; ?>

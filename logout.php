@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
     $msg = 'すでにログアウトしています';
 }
 
-require 'html/logout_header.html';
+require 'html/logout-header.html';
 ?>
 
     <div class="sub-wrapper">
@@ -22,4 +22,4 @@ require 'html/logout_header.html';
       </p>
     </div>
     
-<?php require 'html/logout_footer.html'; ?>
+<?php require 'html/logout-footer.html'; ?>

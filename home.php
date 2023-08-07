@@ -13,6 +13,10 @@ function h ($string) {
     return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 }
 
+function h_d ($string) {
+  return htmlspecialchars_decode($string);
+}
+
 if (isset($_SESSION['user'])) {
 
     require 'pdo.php';
@@ -89,7 +93,7 @@ require 'html/login-header.html';
     <div class="article-wrapper">
       <?php foreach($message_array as $row): ?>
       <article>
-        <p class="message"><?= h($row['message']); ?></p>
+        <p class="message"><?= h_d($row['message']); ?></p>
         <time class="message-date"><?= h($row['postDate']); ?></time>
       </article>
       <?php endforeach; ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'html/logout_header.html';
+require 'html/logout-header.html';
 ?>
 
     <form action="login-function.php" method="post" class="sub-wrapper">
@@ -19,4 +19,4 @@ require 'html/logout_header.html';
       <?= $_SESSION['error'] ?? ''; ?>
     </div>
 
-<?php require 'html/logout_footer.html'; ?>
+<?php require 'html/logout-footer.html'; ?>
