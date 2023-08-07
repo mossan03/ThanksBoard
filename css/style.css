@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+/* カスタムプロパティ */
+:root {
+    --color-bg-base: #ededed;
+    --color-bg-main: #e4d5d5;
+    --color-bg-article: #d4d1d1;
+    --color-bg-message: #faf8f8;
+    --color-font-base: #3d2626b8;
+    --color-font-main: #ab7676;
+    --color-font-sub: #6f6666;
+    --color-font-error: #a30000;
+}
+
+/* 共通のCSS */
+body {
+    background-color: var(--color-bg-base);
+    color: var(--color-font-base);
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳＰゴシック", "MS P Gothic", Arial, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    background-color: var(--color-bg-main);
+    color: var(--color-font-main);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+nav {
+    padding-right: 20px;
+}
+
+.container {
+    max-width: 475px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+h2 {
+    color: var(--color-font-main);
+    font-size: 1.4em;
+}
+
+h2 span {
+    vertical-align: middle;
+}
+
+.error {
+    color: var(--color-font-error);
+    font-size: .8em;
+}
+
+/* 共通のCSS　- ボタン - */
+.button {
+    background-color: var(--color-bg-main);
+    color: var(--color-font-main);
+    line-height: 1;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: #fff;
+    text-align: center;
+    padding: 7px 10px;
+}
+
+/* 共通　- トップへ戻るボタン - */
+html {
+    scroll-behavior: smooth;
+}
+
+.pagetop {
+    background: var(--color-bg-main);
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+}
+
+.pagetop-arrow {
+    border-top: 3px solid var(--color-font-main);
+    border-right: 3px solid var(--color-font-main);
+    height: 10px;
+    width: 10px;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+/* 共通のCSS　- メッセージカード - */
+.article-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+}
+
+article {
+    background-color: var(--color-bg-article);
+    width: 210px;
+    height: 190px;
+}
+
+.message {
+    background-color: var(--color-bg-message);
+    height: 125px;
+    padding: 6px;
+    margin: 15px 15px 10px 15px;
+}
+
+.message-date {
+    color: var(--color-font-sub);
+    font-size: .8em;
+    padding-left: 15px;
+}
+
+/* 共通　- アコーディオンメニュー - */
+.hidden {
+    display: none;
+}
+
+/* ホーム画面のCSS */
+.user-wrapper {
+    margin-bottom: 20px;
+}
+
+.select-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post-wrapper {
+    background-color: var(--color-bg-main);
+    width: 255px;
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+}
+
+.dear-area {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.dear-area p {
+    padding-right: 10px;
+}
+
+.post-wrapper textarea {
+    resize: none;
+    width: 240px;
+    height:85px;
+    padding: 7px;
+    margin-bottom: 5px;
+}
+
+.post-submit-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* マイページのCSS */
+.mypage-accordion h2 {
+    margin-bottom: 10px;
+}
+
+.area {
+    background: var(--color-bg-message);
+    display: block;
+    width:90%;
+    padding:30px 20px;
+    margin:10px auto;
+    animation-name: displayAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  
+
+.area p {
+    margin-bottom: 25px;
+}
+
+.area textarea {
+    resize: none;
+    width: 100%;
+    height:70px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+/* ログイン・ログアウト・PW変更・退会画面・削除依頼のCSS */
+.sub-wrapper {
+    background-color: var(--color-bg-article);
+    width: 280px;
+    margin: auto;
+    padding: 25px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+.sub-wrapper h2 {
+    margin-bottom: 25px;
+}
+
+.sub-wrapper p {
+    margin-bottom: 25px;
+}
+
+.sub-wrapper p:last-child {
+    margin-bottom: 0;
+}
+
+.subpage-error {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button-area .button {
+    display: block;
+    margin: 0 2em;
+}
+
+/* 削除依頼画面のCSS */
+
+.confirm-area {
+    padding: 0 1em;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.confirm-area h3 {
+    margin-bottom: .5em;
+}
+
+.confirm-area p {
+    word-break: break-all;
+}
+
+/* レシポンシブCSS */
+@media screen and (max-width: 475px) {
+    article {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 475px) {
+    .home-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (min-width: 925px) {
+    .container {
+        max-width: 925px;
+    }
+}
