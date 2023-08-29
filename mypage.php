@@ -32,7 +32,9 @@ require 'html/login-header.html';
 ?>
 
     <div class="accordion mypage-accordion">
-      <h2><span class="material-symbols-outlined">filter_vintage</span>投稿済み一覧</h2>
+      <h2 class="pointer">
+        <span class="material-symbols-outlined">filter_vintage</span>投稿済み一覧
+      </h2>
       <div class="hidden">
         <div class="article-wrapper">
           <?php foreach($message_array as $row): ?>
@@ -46,7 +48,9 @@ require 'html/login-header.html';
       <hr>
     </div>
     <div class="accordion mypage-accordion">
-      <h2><span class="material-symbols-outlined">filter_vintage</span>パスワード変更</h2>
+      <h2 class="pointer">
+        <span class="material-symbols-outlined">filter_vintage</span>パスワード変更
+      </h2>
       <div class="hidden">
         <div class="area">
           <p>パスワードの変更は下記ボタンからお手続きください。</p>
@@ -56,7 +60,9 @@ require 'html/login-header.html';
       <hr>
     </div>
     <div class="accordion mypage-accordion">
-      <h2><span class="material-symbols-outlined">filter_vintage</span>退会</h2>
+      <h2 class="pointer">
+        <span class="material-symbols-outlined">filter_vintage</span>退会
+      </h2>
       <div class="hidden">
         <div class="area">
           <p>退会は下記のボタンからお手続きください。</p>
@@ -67,7 +73,9 @@ require 'html/login-header.html';
       <hr>
     </div>
     <div class="accordion mypage-accordion">
-      <h2><span class="material-symbols-outlined">filter_vintage</span>投稿削除</h2>
+      <h2 class="pointer">
+        <span class="material-symbols-outlined">filter_vintage</span>投稿削除
+      </h2>
       <div class="hidden">
         <div class="area">
           <p>投稿削除は、下記フォームよりご依頼ください。内容を精査した上で削除いたします。</p>

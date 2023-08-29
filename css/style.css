@@ -64,6 +64,10 @@ h2 span {
     font-size: .8em;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 /* 共通のCSS　- ボタン - */
 .button {
     background-color: var(--color-bg-main);
@@ -77,6 +81,7 @@ h2 span {
     border-color: #fff;
     text-align: center;
     padding: 7px 10px;
+    cursor: pointer;
 }
 
 /* 共通　- トップへ戻るボタン - */

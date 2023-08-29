@@ -99,7 +99,9 @@ require 'html/login-header.html';
       <?php endforeach; ?>
     </div>
     <div class="post-wrapper accordion">
-      <h2><span class="material-symbols-outlined">edit</span>Post</h2>
+      <h2 class="pointer">
+        <span class="material-symbols-outlined">edit</span>Post
+      </h2>
       <div class="hidden">
         <form action="#" method="post">
           <div class="dear-area">
